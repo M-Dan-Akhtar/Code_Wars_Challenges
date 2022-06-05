@@ -18,4 +18,4 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 long long rowSumOddNumbers(unsigned n){
   //your code here
   return pow(n, 3);
-}
+}  
