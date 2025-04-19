@@ -45,3 +45,19 @@ function isSubSet(arrA, arrB){
 console.log(isSubSet([11, 1, 13, 21, 3, 7], [11, 3, 7, 1] ), "true");
 console.log(isSubSet([1, 2, 3, 4, 5, 6], [1, 2, 4]) , "true");
 console.log(isSubSet([10, 5, 2, 23, 19], [19, 5, 3] ), "false");
+
+
+//using a set
+function isSubSetHashSet(arrA, arrB){
+  let s = new Set(arrA);
+
+  arrB.forEach( x => {
+    if(!s.has(x)) return false
+  })
+
+  return true;
+}
+
+console.log(isSubSetHashSet([11, 1, 13, 21, 3, 7], [11, 3, 7, 1] ), "true");
+console.log(isSubSetHashSet([1, 2, 3, 4, 5, 6], [1, 2, 4]) , "true");
+console.log(isSubSetHashSet([10, 5, 2, 23, 19], [19, 5, 3] ), "false");
